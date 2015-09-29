@@ -36,7 +36,6 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
-import javax.servlet.WriteListener;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpServletResponseWrapper;
@@ -432,7 +431,7 @@ public abstract class ImportSupport extends BodyTagSupport
                 bos.write(b);
             }
 
-            @Override
+            /*@Override //commented out as this is new api in servlet 3.1
             public boolean isReady() {
                 return false;
             }
@@ -440,7 +439,7 @@ public abstract class ImportSupport extends BodyTagSupport
             @Override
             public void setWriteListener(WriteListener writeListener) {
 
-            }
+            }*/
         };
 
         /**
